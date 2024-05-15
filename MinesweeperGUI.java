@@ -157,6 +157,7 @@ public class MinesweeperGUI {
         System.out.println("Clicked cell: (" + row + ", " + col + ")");
         System.out.println("Is bomb: " + isBomb);
         System.out.println("Count: " + count);
+        
         if (isBomb) {
         	// buttons[row][col].setText("X");
             ImageIcon bombIcon = new ImageIcon("bomb.png");
@@ -166,8 +167,9 @@ public class MinesweeperGUI {
             buttons[row][col].setBackground(Color.RED); // Set text/icon for bomb cell
         } else {
             buttons[row][col].setText(Integer.toString(count));
-            buttons[row][col].setBackground(Color.GREEN); // text/icon for non-bomb cell
+            // buttons[row][col].setBackground(Color.GREEN); // text/icon for non-bomb cell
         }
+        
         frame.repaint();
         //if (isBomb){
         //    JOptionPane.showMessageDialog(frame, "BOMBED");
@@ -190,7 +192,7 @@ public class MinesweeperGUI {
             // Base case: Return if cell is out of bounds or already revealed
             return;
         }
-    
+        // need to fix recursion for adjacent cells
         int count = grid.getCountAtLocation(row, col);
         buttons[row][col].setText(Integer.toString(count));
         buttons[row][col].setBackground(Color.GREEN); // Set background color for revealed cell
