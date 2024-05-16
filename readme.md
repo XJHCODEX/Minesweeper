@@ -1,5 +1,5 @@
 # Minesweeper Game
-## (Being updated)
+## (Being continued)
 
 ## Introduction
 This Minesweeper game is a classic single-player puzzle game where the player must uncover all non-bomb cells without detonating any bombs. It's a fun and challenging game that tests your logical thinking and strategy skills.
